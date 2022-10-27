@@ -9,27 +9,37 @@ public class Rectangle {
 	
 	//methods
 	public Rectangle() {
-		
+		length=1;
+		width=1;
+		perimeter=findPerimeter();
+		area=findArea();
 	}
 	
 	public Rectangle(double side) {
+		this.length=side;
+		this.width=side;
 		
 	}
 	
 	public Rectangle(double length, double width) {
-		
+		this.length=length;
+		this.width=width;
+		this.perimeter=findPerimeter();
 	}
 	
 	private double findPerimeter() {
-		return 0;
+		return this.length*2+this.width*2;
 	}
 	
 	private double findArea() {
-		return 0;
+		return this.length*this.width;
 	}
 	
 	public void printStats() {
-		
+		System.out.println(length);
+		System.out.println(width);
+		System.out.println(perimeter);
+		System.out.println(area);
 	}
 
 	public double getLength() {
@@ -37,7 +47,7 @@ public class Rectangle {
 	}
 
 	public void setLength(double length) {
-		this.length = length;
+		this.length=length;
 	}
 
 	public double getWidth() {

@@ -8,23 +8,27 @@ public class Circle {
 	
 	//Methods
 	public Circle() {
-		
+		radius=1;
+		circumference=findCircumference();
+		area=findArea();
 	}
 	
 	public Circle(double r) {
-		
+		this.radius=r;
 	}
 	
 	private double findCircumference() {
-		return 0;
+		return (22/7)*(this.radius+this.radius);
 	}
 	
 	private double findArea() {
-		return 0;
+		return (22/7)*(this.radius*this.radius);
 	}
 	
 	public void printStats() {
-		
+		System.out.println(radius);
+		System.out.println(circumference);
+		System.out.println(area);
 	}
 
 	public double getRadius() {
