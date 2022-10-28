@@ -15,20 +15,22 @@ public class Circle {
 	
 	public Circle(double r) {
 		this.radius=r;
+		circumference=findCircumference();
+		area=findArea();
 	}
 	
 	private double findCircumference() {
-		return (22/7)*(this.radius+this.radius);
+		return Math.PI*(this.radius+this.radius);
 	}
 	
 	private double findArea() {
-		return (22/7)*(this.radius*this.radius);
+		return Math.PI*(this.radius*this.radius);
 	}
-	
+	 
 	public void printStats() {
-		System.out.println(radius);
-		System.out.println(circumference);
-		System.out.println(area);
+		System.out.println("Radius: " +this.radius);
+		System.out.println("Circumference: " +this.circumference);
+		System.out.println("Area: " +this.area);
 	}
 
 	public double getRadius() {
@@ -37,6 +39,8 @@ public class Circle {
 
 	public void setRadius(double radius) {
 		this.radius = radius;
+		circumference=findCircumference();
+		area=findArea();
 	}
 
 	public double getCircumference() {
