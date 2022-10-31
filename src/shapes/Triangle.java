@@ -17,11 +17,11 @@ public class Triangle {
 	}
 	
 	public Triangle(double a, double b, double c) {
-		sideA=a;
-		sideB=b;
-		sideC=c;
-		perimeter=findPerimeter();
-		area=findArea();
+		this.sideA=a;
+		this.sideB=b;
+		this.sideC=c;
+		this.perimeter=findPerimeter();
+		this.area=findArea();
 	}
 	
 	private double findPerimeter() {
