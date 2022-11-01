@@ -72,14 +72,68 @@ public class Main {
 				do {
 					System.out.println("What shape do you want to view?");
 					System.out.println("1. Rectangle");
-					
-				} 
+					System.out.println("2. Circle");
+					System.out.println("3. Triangle");
+					System.out.println("4. Quit");
+					try {
+						userChoice2 = in.nextInt();
+					} catch (InputMismatchException e) {
+						userChoice2 = 4;
+						System.out.println(" BYE ");
+					}
+					if (userChoice2==1) {
+						r1 = new Rectangle();
+						r1.printStats();
+					}else if (userChoice2==2) {
+						c1 = new Circle();
+						c1.printStats();
+					}else if (userChoice2==3) {
+						t1 = new Triangle();
+						t1.printStats();
+					}
+				} while (userChoice2 !=4);
 				
 			}else if (userChoice==3) {
-				
+				int userChoice3;
+				do {
+					System.out.println("What shape do you want to modify?");
+					System.out.println("1. Rectangle");
+					System.out.println("2. Circle");
+					System.out.println("3.Triangle");
+					System.out.println("4. Quit");
+					try {
+						userChoice3 = in.nextInt();
+					} catch (InputMismatchException e) {
+						userChoice3 =4;
+						System.out.println(" BYE ");
+					}
+					if (userChoice3==1) {
+						System.out.println("What is the new length?");
+						double length = in.nextDouble();
+						r1 = new Rectangle(length);
+						System.out.println("What is the new width?");
+						double width = in.nextDouble();
+						r1 = new Rectangle(width);
+						r1.printStats();
+					}else if (userChoice==2) {
+						System.out.println("What is your new radius?");
+						double radius = in.nextDouble();
+						c1 = new Circle(radius);
+						c1.printStats();
+					}else if (userChoice==3) {
+						System.out.println("What is your new height?");
+						double a = in.nextDouble();
+						System.out.println("What iis your new base?");
+						double b = in.nextDouble();
+						System.out.println("What is your new third side?");
+						double c = in.nextDouble();
+						t1=new Triangle(a,b,c);
+						t1.printStats();
+					}
+				} while (userChoice3 !=4);
 			}
 		} while (userChoice !=4);
-	}
+	} 
 }
 
 
