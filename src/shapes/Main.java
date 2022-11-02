@@ -93,7 +93,8 @@ public class Main {
 					}
 				} while (userChoice2 !=4);
 				
-			}else if (userChoice==3) {
+			}else if (userChoice==3) 
+			{
 				int userChoice3;
 				do {
 					System.out.println("What shape do you want to modify?");
@@ -115,12 +116,12 @@ public class Main {
 						double width = in.nextDouble();
 						r1 = new Rectangle(width);
 						r1.printStats();
-					}else if (userChoice==2) {
+					}else if (userChoice3==2) {
 						System.out.println("What is your new radius?");
 						double radius = in.nextDouble();
 						c1 = new Circle(radius);
 						c1.printStats();
-					}else if (userChoice==3) {
+					}else if (userChoice3==3) {
 						System.out.println("What is your new height?");
 						double a = in.nextDouble();
 						System.out.println("What iis your new base?");
@@ -133,6 +134,8 @@ public class Main {
 				} while (userChoice3 !=4);
 			}
 		} while (userChoice !=4);
+		System.out.println("BYE ");
+		in.close();
 	} 
 }
 
